@@ -1,0 +1,22 @@
+
+<router-outlet></router-outlet>
+
+<div>
+  <table class="table table-bordered">
+    <tr>
+      <th># Tag</th>
+      <th># URL</th>
+      <th># Description</th>
+      <th># Edit</th>
+      <th># Delete</th>
+    </tr>
+    <tr *ngFor="let awesome of awesomeList | filter: searchText">
+      <td>{{awesome.tag}}</td>
+      <td>{{awesome.url}}</td>
+      <td>{{awesome.descriptions}}</td>
+      <td><a [routerLink]="['edit',awesome.id]">Edit</a></td>
+      <td><a [routerLink]="['delete',awesome.id]">Delete</a></td>
+    </tr>
+  </table>
+</div>
+

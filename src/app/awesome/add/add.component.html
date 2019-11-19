@@ -1,0 +1,27 @@
+<div class="full-content">
+  <h2>Add Awesome:</h2>
+  <div *ngIf="message">
+    <p style="color: red">{{ message }}</p>
+  </div>
+  <form #awesomeForm="ngForm" (ngSubmit)="addAwesome(awesomeForm)">
+    <div class="form-group">
+      <label>Tag: </label>
+      <input name="tag" type="text" class="form-control" placeholder="Nhập tag" ngModel="">
+    </div>
+    <div class="form-group">
+      <label>URL: </label>
+      <input name="url" type="text" class="form-control" placeholder="Nhập url" ngModel="">
+    </div>
+
+    <div class="form-group">
+      <label>Mô tả: </label>
+      <textarea type="text" name="descriptions" class="form-control" rows="4" placeholder="Nhập mô tả"
+                ngModel=""></textarea>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success" style="margin: auto">Add</button>
+      <button type="button" class="btn btn-success" style="margin: 10px" [routerLink]="['/list']">Back</button>
+    </div>
+  </form>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,19 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+h2 {
+  margin-top: 20px;
+}
+
+.search-filter {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+  margin-top: 30px;
+}
+
+.form-control {
+  box-shadow: 0 10px 40px 0 #B0C1D9;
+}
+.form-control::placeholder  {
+  font-family: FontAwesome;
+}
